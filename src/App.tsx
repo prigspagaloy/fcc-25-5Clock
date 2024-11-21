@@ -6,7 +6,7 @@ function App() {
   const [sessionLength, setSessionLength] = useState(25);
   const [timeLeft, setTimeLeft] = useState(1500);
   const [playClock, setPlayClock] = useState(false);
-  const intervalRef = useRef(null);
+  const intervalRef: any = useRef(null);
   const [clockState, setClockState] = useState("SESSION");
   const [color, setColor] = useState("white");
 
@@ -56,13 +56,13 @@ function App() {
 
   const alarm = () => {
     if (!timeLeft) {
-      const audio = document.getElementById("beep");
+      const audio: any = document.getElementById("beep");
       audio.play();
     }
   }
 
   const resetTimer = () => {
-    const audio = document.getElementById("beep");
+    const audio: any = document.getElementById("beep");
     setPlayClock(false);
     setBreakLength(5);
     setSessionLength(25);
